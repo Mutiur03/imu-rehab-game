@@ -6,6 +6,29 @@
 [node name="Main" type="Node2D" unique_id=225230415]
 script = ExtResource("1_0xm2m")
 
+[node name="StartMarker" type="Node2D" parent="."]
+position = Vector2(150, 300)
+
+[node name="Ring" type="Line2D" parent="StartMarker"]
+points = PackedVector2Array(0, -36, 18, -31, 31, -18, 36, 0, 31, 18, 18, 31, 0, 36, -18, 31, -31, 18, -36, 0, -31, -18, -18, -31, 0, -36)
+width = 6.0
+default_color = Color(0.231373, 0.509804, 0.964706, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Label" type="Label" parent="StartMarker"]
+offset_left = -48.0
+offset_top = 42.0
+offset_right = 48.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0.941176, 0.972549, 1, 1)
+theme_override_colors/font_outline_color = Color(0.0352941, 0.0745098, 0.141176, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "START"
+horizontal_alignment = 1
+
 [node name="Player" type="Node2D" parent="." unique_id=741166419]
 position = Vector2(150, 300)
 script = ExtResource("1_ig7tw")
@@ -27,3 +50,28 @@ offset_top = 30.0
 offset_right = 136.0
 offset_bottom = 53.0
 text = "Repetitions: 0"
+
+[node name="TimerLabel" type="Label" parent="." unique_id=2111358152]
+offset_left = 30.0
+offset_top = 60.0
+offset_right = 70.0
+offset_bottom = 83.0
+
+[node name="MessageLabel" type="Label" parent="." unique_id=1124046419]
+offset_left = 30.0
+offset_top = 90.0
+offset_right = 70.0
+offset_bottom = 113.0
+
+[node name="SummaryLabel" type="Label" parent="." unique_id=928056910]
+offset_left = 30.0
+offset_top = 140.0
+offset_right = 70.0
+offset_bottom = 163.0
+
+[node name="ContinueButton" type="Button" parent="." unique_id=500806161]
+offset_left = 30.0
+offset_top = 370.0
+offset_right = 38.0
+offset_bottom = 378.0
+text = "Continue to Level 2"
