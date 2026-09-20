@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cll8desdmytut"]
+
+[ext_resource type="Script" uid="uid://bwawi2bdys7vs" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cbws2pxa2inhn" path="res://player.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=225230415]
+script = ExtResource("1_0xm2m")
+
+[node name="Player" type="Node2D" parent="." unique_id=741166419]
+position = Vector2(150, 300)
+script = ExtResource("1_ig7tw")
+
+[node name="PlayerVisual" type="Polygon2D" parent="Player" unique_id=1712608055]
+color = Color(0, 0.30980393, 1, 1)
+polygon = PackedVector2Array(0, -25, 18, -18, 25, 0, 18, 18, 0, 25, -18, 18, -25, 0, -18, -18)
+
+[node name="Target" type="Node2D" parent="." unique_id=1663784686]
+position = Vector2(850, 300)
+
+[node name="TargetVisual" type="Polygon2D" parent="Target" unique_id=2001919068]
+color = Color(0.13333334, 0.77254903, 0.36862746, 1)
+polygon = PackedVector2Array(0, -25, 18, -18, 25, 0, 18, 18, 0, 25, -18, 18, -25, 0, -18, -18)
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1933775505]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 136.0
+offset_bottom = 53.0
+text = "Repetitions: 0"
